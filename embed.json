@@ -1,0 +1,7 @@
+{
+    "type": "object",
+    "author_name": "author name",
+    "author_url": "https://google.com",
+    "provider_name": "provider name",
+    "provider_url": "https://google.com"
+}
