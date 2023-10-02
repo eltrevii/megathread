@@ -12,7 +12,7 @@
     padding: 0.5em 0.5em 0;
     transition: 300ms;
   }
-  details:hover:not([open]) {
+  details:hover {
     background-color: #777;
     transition: 300ms;
   }
@@ -24,6 +24,7 @@
   details[open] {
     padding: 0.5em;
     margin-top: 0px;
+    background-color: #555;
   }
   details[open] summary {
     border-bottom: 1px solid #aaa;
@@ -32,9 +33,38 @@
   details + details {
     margin-top: 10px !important;
   }
-  details p {
-    line-height: 5px;
+  details {
+    line-height: 25px;
     margin-bottom: 0.5em;
+  }
+  a {
+    position: relative;
+    text-decoration: none;
+    transition: 300ms;
+  }
+  a:link {
+    color: #07f;
+  }
+  a:visited {
+    color: #05d;
+  }
+  a:hover {
+    color: #0ff;
+  }
+  a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  }
+  a:hover::before {
+  transform: scaleX(1);
   }
   body {
     font-family: 'Google Sans', sans-serif;
@@ -69,7 +99,7 @@
 
 <details>
   <summary><h3>PRACTICA</h3></summary>
-- [CSGO] YPRAC | MAPAS WORKSHOP | <a href="https://yprac.com">CLIENTE</a> <br>
+- <a href="https://yprac.com">YPRAC</a> | MAPAS WORKSHOP | CLIENTE <br>
 - <a href="https://cslabez.com/alternative-cs2-aim-botz-map">CSLAB AIM BOTZ (cs2_aim)</a> (!) <br>
 - <a href="https://refrag.gg">REFRAG</a> <br>
 - <a href="https://faceit.com">FACEIT</a>
@@ -91,13 +121,13 @@
 <details>
 <summary><h3>AMAZON</h3></summary>
 - BUILD #1 <br>
-  - caja: <a href="https://www.amazon.es/gp/product/B0BBR6Z256">mars gaming mc-s1</a> <strong>29,90€</strong> <br>
-  - fuente de alimentacion: <a href="https://www.amazon.es/gp/product/B0100QRRTK">evga 600 w1</a> <strong>54,90€</strong> <br>
-  - ssd: <a href="https://www.amazon.es/gp/product/B082BJ4679">patriot p300 nvme</a> (500gb) <strong>29,99€</strong> <br>
-  - ram: <a href="https://www.amazon.es/gp/product/B097HNYMYR">kingston fury beast 16gb</a> (2x8) <strong>54,99€</strong> <br>
-  - placa base: <a href="https://www.amazon.es/Gigabyte-Technology-H410M-S2H-V2/dp/B08YRD7VS7">gigabyte h410m s2h v2</a> <strong>64,99€</strong> <br>
-  - cpu: <a href="https://www.amazon.es/Intel-Core-i5-10400-Procesador-LGA1200/dp/B0883NPQST">intel core i5-10400</a> <strong>129,99€</strong> <br>
-  total: <strong>364,76€</strong>
+-> caja: <a href="https://www.amazon.es/gp/product/B0BBR6Z256">mars gaming mc-s1</a> <strong>29,90€</strong> <br>
+-> fuente de alimentacion: <a href="https://www.amazon.es/gp/product/B0100QRRTK">evga 600 w1</a> <strong>54,90€</strong> <br>
+-> ssd: <a href="https://www.amazon.es/gp/product/B082BJ4679">patriot p300 nvme</a> (500gb) <strong>29,99€</strong> <br>
+-> ram: <a href="https://www.amazon.es/gp/product/B097HNYMYR">kingston fury beast 16gb</a> (2x8) <strong>54,99€</strong> <br>
+-> placa base: <a href="https://www.amazon.es/Gigabyte-Technology-H410M-S2H-V2/dp/B08YRD7VS7">gigabyte h410m s2h v2</a> <strong>64,99€</strong> <br>
+-> cpu: <a href="https://www.amazon.es/Intel-Core-i5-10400-Procesador-LGA1200/dp/B0883NPQST">intel core i5-10400</a> <strong>129,99€</strong> <br>
+-> total: <strong>364,76€</strong>
 </details>
 
 <details>
@@ -119,7 +149,7 @@
 <h1 id="windows-lites">WINDOWS LITES</h1>
 <details>
 <summary><h3>X-LITE</h3></summary>
-- <a href="https://windowsxlite.com">X-LITE</a>
+- <a href="https://windowsxlite.com">WINDOWS X-LITE</a>
 </details>
 
 <details>
