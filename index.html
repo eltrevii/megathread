@@ -2,6 +2,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
   details summary { 
     cursor: pointer;
+    background-color: #222;
+    transition: 300ms;
   }
   details summary > * {
     display: inline;
@@ -15,7 +17,7 @@
     margin-bottom: 0.5em;
     margin-top: -1em;
   }
-  details:hover {
+  details:hover summary {
     background-color: #333;
     transition: 300ms;
   }
@@ -100,7 +102,6 @@
     transition: 0.25s transform ease;
   }
 
-  /* THE MAGIC 🧙‍♀️ */
   details[open] > summary:before {
     transform: rotate(90deg);
   }
