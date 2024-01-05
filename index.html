@@ -22,16 +22,20 @@
   summary {
     font-weight: bold;
     margin: -0.5em -0.5em 0;
-    padding: 0.5em;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    display: block;
+    position: relative;
   }
   details[open] {
     padding: 0.5em;
     margin-top: -1em;
-    background-color: #555;
+    background-color: #444;
   }
   details[open] summary {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #555;
     margin-bottom: 0.5em;
+    background-color: #555;
   }
   details + details {
     margin-top: 10px !important;
@@ -77,11 +81,37 @@
   }
   pre {
     line-height: 15px;
-    background-color: #444;
+    background-color: #393939;
     padding: 10px 10px 10px 0;
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 5px;
+  }
+  summary:before {
+    content: "";
+    border-width: 0.4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 0.9rem;
+    left: 0.7rem;
+    transform: rotate(0);
+    transform-origin: 0.2rem 50%;
+    transition: 0.25s transform ease;
+  }
+
+  /* THE MAGIC 🧙‍♀️ */
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details > ul {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
   }
 </style>
 
@@ -99,7 +129,7 @@
       });
     })
 
-    document.querySelectorAll("a").forEach(el => el.textContent = " " + el.textContent + " ")
+    document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
 
     ;/* -> not useful
     function removell(x) {
@@ -132,31 +162,31 @@
   <h1>COUNTER-STRIKE 2</h1>
   <details>
   <summary><h3>MODS/CONFIGS</h3></summary><pre>
-  -<a href="https://github.com/xPaw/CS2">CS2 TEXT MOD</a>
-  -<a href="https://gist.github.com/xPaw/4681640268dfde474ccb">CS2 PRACTICE CONFIG</a></pre></details>
+  - <a href="https://github.com/xPaw/CS2">CS2 TEXT MOD</a>
+  - <a href="https://gist.github.com/xPaw/4681640268dfde474ccb">CS2 PRACTICE CONFIG</a></pre></details>
 
   <details>
     <summary><h3>PRACTICA</h3></summary><pre>
-  -<a href="https://yprac.com">YPRAC</a>--> MAPAS WORKSHOP | CLIENTE
-  -<a href="https://cslabez.com/alternative-cs2-aim-botz-map">CSLAB AIM BOTZ (cs2_aim)</a> (!)
-  -<a href="https://refrag.gg">REFRAG</a>
-  -<a href="https://faceit.com">FACEIT</a>
-  -<a href="https://youtu.be/BtbNz-k9GX4">VIDEO ESL-CS | MEJORES MAPAS</a></pre></details>
+  - <a href="https://yprac.com">YPRAC</a> --> MAPAS WORKSHOP | CLIENTE
+  - <a href="https://cslabez.com/alternative-cs2-aim-botz-map">CSLAB AIM BOTZ (cs2_aim)</a> (!)
+  - <a href="https://refrag.gg">REFRAG</a>
+  - <a href="https://faceit.com">FACEIT</a>
+  - <a href="https://youtu.be/BtbNz-k9GX4">VIDEO ESL-CS | MEJORES MAPAS</a></pre></details>
 
   <details>
   <summary><h3>VIDEOS</h3></summary><pre>
-  -<a href="https://youtu.be/VNmr8TOZrtA">ZNORUX | COSAS QUE DEBES SABER</a>
-  -<a href="https://youtu.be/LNCHSiUFPaU">ZNORUX | GUIA DE OPTIMIZACION</a>
-  -<a href="https://youtu.be/SgSB1MACAtM">ZNORUX | GUIA DE OPTIMIZACION BETA</a></pre></details>
+  - <a href="https://youtu.be/VNmr8TOZrtA">ZNORUX | COSAS QUE DEBES SABER</a>
+  - <a href="https://youtu.be/LNCHSiUFPaU">ZNORUX | GUIA DE OPTIMIZACION</a>
+  - <a href="https://youtu.be/SgSB1MACAtM">ZNORUX | GUIA DE OPTIMIZACION BETA</a></pre></details>
 
   <details>
   <summary><h3>OTROS</h3></summary><pre>
-  -<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3031823818">COMANDOS DE CUCHILLOS</a></pre></details>
+  - <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3031823818">COMANDOS DE CUCHILLOS</a></pre></details>
 
   <h1>HACKINTOSH</h1>
   <details>
   <summary><h3>AMAZON</h3></summary><pre>
-  -BUILD #1
+  - BUILD #1
   -> caja: <a href="https://www.amazon.es/gp/product/B0BBR6Z256">mars gaming mc-s1</a> <strong>28,39€</strong>
   -> placa base: <a href="https://www.amazon.es/Gigabyte-Technology-H410M-S2H-V2/dp/B08YRD7VS7">gigabyte h410m s2h v2</a> <strong>68,89€</strong>
   -> cpu: <a href="https://www.amazon.es/Intel-Core-i5-10400-Procesador-LGA1200/dp/B0883NPQST">intel core i5-10400</a> <strong>146,19€</strong>
@@ -168,30 +198,30 @@
 
   <details>
   <summary><h3>EBAY</h3></summary><pre>
-  -FUJITSU P420</pre></details>
+  - FUJITSU P420</pre></details>
 
   <h1>MAGIA</h1>
   <details>
   <summary><h3>RANDOM</h3></summary><pre>
-  -<a href="https://youtube.com/shorts/LUGPWdhDEBM">TRANSFERIR GOMA DESDE LA MANO</a></pre></details>
+  - <a href="https://youtube.com/shorts/LUGPWdhDEBM">TRANSFERIR GOMA DESDE LA MANO</a></pre></details>
 
   <details>
   <summary><h3>CARTAS</h3></summary><pre>
-  -</pre></details>
+  - </pre></details>
 
   <h1>WINDOWS LITES</h1>
   <details>
   <summary><h3>X-LITE</h3></summary><pre>
-  -<a href="https://windowsxlite.com">WINDOWS X-LITE</a></pre></details>
+  - <a href="https://windowsxlite.com">WINDOWS X-LITE</a></pre></details>
 
   <details>
   <summary><h3>GHOST SPECTRE</h3></summary><pre>
-  -<a href="https://ghostclouds.xyz/wp/w10entltsc1809">W10 LTSC 1809</a> (ACT 01/2023)
-  -<a href="https://ghostclouds.xyz/wp/w10-pro-aio-x64">W10 ORIG 20H1-22H2 (AIO)</a> (ACT 07/2023) | PASS: aiou10
-  -<a href="https://ghostclouds.xyz/wp/w11-22h2-22621/">W11 ORIG 22H2 MOMENT 4</a> (ACT 10/2023)</pre></details>
+  - <a href="https://ghostclouds.xyz/wp/w10entltsc1809">W10 LTSC 1809</a> (ACT 01/2023)
+  - <a href="https://ghostclouds.xyz/wp/w10-pro-aio-x64">W10 ORIG 20H1-22H2 (AIO)</a> (ACT 07/2023) | PASS: aiou10
+  - <a href="https://ghostclouds.xyz/wp/w11-22h2-22621/">W11 ORIG 22H2 MOMENT 4</a> (ACT 10/2023)</pre></details>
 
   <h1>EXTRAS/OTROS</h1>
   <details>
   <summary><h3>DELITOS</h3></summary><pre>
-  -MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMG</a> [2]</pre></details>
+  - MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMG</a> [2]</pre></details>
 </body>
