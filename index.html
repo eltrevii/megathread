@@ -130,6 +130,7 @@
     })
 
     document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
+    document.querySelectorAll("a").forEach(el => el.setAttribute("target", "_blank"))
 
     ;/* -> not useful
     function removell(x) {
