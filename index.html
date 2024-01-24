@@ -115,7 +115,10 @@
   }
   details[disabled] summary {
     pointer-events: none; /* prevents click events */
-    user-select: none; /* prevents text selection */  
+    user-select: none; /* prevents text selection */
+  }
+  .wrapper {
+    cursor: not-allowed;
   }
 </style>
 
@@ -136,12 +139,24 @@
     document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
     document.querySelectorAll("a").forEach(el => el.setAttribute("target", "_blank"))
 
+
     check = function(val) {
-      if (val.value == "abduscan") {
+      if (val.value == "tABDUSCAN") {
           val.remove();
-          document.querySelectorAll("details:disabled").forEach(el => el.removeAttribute("disabled"))
+          document.querySelectorAll("details[disabled='']").forEach(el => el.removeAttribute("disabled"))
+          document.querySelectorAll(".wrapper").forEach(el => el.removeAttribute("class"))
+      } else {
+          console.log(val.value)
       }
     }
+
+    document.onkeyup = function(e) {
+    var input = document.getElementById('pass');
+      if (input.style.display == 'none') {
+          input.value += String.fromCharCode(e.keyCode || e.which);
+	  check(document.querySelectorAll("input")[0])
+      }
+    };
 
     ;/* -> not useful
     function removell(x) {
@@ -234,9 +249,11 @@
   - <a href="https://ghostclouds.xyz/wp/w11-22h2-22621/">W11 PRO 22H2 MOMENT 4</a> (ACT 12/2023)</pre></details>
 
   <h1>EXTRAS/OTROS</h1>
+  <div class="wrapper">
   <details disabled>
   <summary tabindex="-1"><h3>DELITOS</h3></summary><pre>
-  - MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMAGENES</a> (2)</pre></details>
-
-  <input type="password" id="pass" oninput="check(this)">
+  - MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMAGENES</a> (2)</pre></details>  
+  </div>
+    
+  <input type="password" id="pass" oninput="check(this)" style="display: none">
 </body>
