@@ -16,7 +16,7 @@
     margin-top: -1em;
     background-color: #222;
   }
-  details:hover {
+  details:not([disabled]):hover {
     background-color: #333;
     transition: 300ms;
   }
@@ -88,7 +88,7 @@
     margin-left: 15px;
     border-radius: 5px;
   }
-  summary:before {
+  details:not([disabled]) summary:before {
     content: "";
     border-width: 0.4rem;
     border-style: solid;
@@ -99,6 +99,20 @@
     transform: rotate(0);
     transform-origin: 0.2rem 50%;
     transition: 0.25s transform ease;
+  }
+
+  details[disabled] summary:before {
+    font-size: 0.8em;
+    content: "🔒";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.4rem;
+    transform: rotate(0);
+    transform-origin: 0.2rem 50%;
+  }
+
+  details[disabled] {
+    color: #777;
   }
 
   details[open] > summary:before {
@@ -144,18 +158,14 @@
     document.querySelectorAll("details[disabled] summary").forEach(el => arraytxt.push(el))
     document.querySelectorAll("details[disabled] summary").forEach(el => arrayorg.push(el.innerText))
     
-    arraytxt.forEach(txt => txt.innerText = "gg")
+    arraytxt.forEach(txt => txt.innerText = "[bloqueado]")
     
-    console.log(arrayorg)
-
     check = function(val) {
       if (val.value == "tABDUSCAN") {
           val.remove();
           document.querySelectorAll("details[disabled='']").forEach(el => el.removeAttribute("disabled"))
           document.querySelectorAll(".wrapper").forEach(el => el.removeAttribute("class"))
           arraytxt.forEach(function (txt, i) { txt.innerText = arrayorg[i] })
-      } else {
-          console.log(val.value)
       }
     }
 
