@@ -113,6 +113,10 @@
     padding-bottom: 1rem;
     margin-bottom: 0;
   }
+  details[disabled] summary {
+    pointer-events: none; /* prevents click events */
+    user-select: none; /* prevents text selection */  
+  }
 </style>
 
 <script type="text/javascript">
@@ -131,6 +135,13 @@
 
     document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
     document.querySelectorAll("a").forEach(el => el.setAttribute("target", "_blank"))
+
+    check = function(val) {
+      if (val.value == "abduscan") {
+          val.remove();
+          document.querySelectorAll("details:disabled").forEach(el => el.removeAttribute("disabled"))
+      }
+    }
 
     ;/* -> not useful
     function removell(x) {
@@ -223,7 +234,9 @@
   - <a href="https://ghostclouds.xyz/wp/w11-22h2-22621/">W11 PRO 22H2 MOMENT 4</a> (ACT 12/2023)</pre></details>
 
   <h1>EXTRAS/OTROS</h1>
-  <details>
-  <summary><h3>DELITOS</h3></summary><pre>
-  - MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMG</a> [2]</pre></details>
+  <details disabled>
+  <summary tabindex="-1"><h3>DELITOS</h3></summary><pre>
+  - MIRAR CONVERSACIONES AJENAS: <a href="https://drive.google.com/drive/folders/1-cLJqMiMMitznTtyQEGngor08o3TbYu7">IMAGENES</a> (2)</pre></details>
+
+  <input type="password" id="pass" oninput="check(this)">
 </body>
