@@ -161,11 +161,14 @@
     arraytxt.forEach(txt => txt.innerText = "[bloqueado]")
     
     check = function(val) {
-      if (val.value == "tABDUSCAN") {
+      if (val.value == "tABDUSCAN" || val.value == "ABDUSCAN") {
           val.remove();
           document.querySelectorAll("details[disabled='']").forEach(el => el.removeAttribute("disabled"))
           document.querySelectorAll(".wrapper").forEach(el => el.removeAttribute("class"))
           arraytxt.forEach(function (txt, i) { txt.innerText = arrayorg[i] })
+      } else {
+          console.clear()
+          console.log(val.value)
       }
     }
 
