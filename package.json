@@ -4,15 +4,15 @@
 	"version": "1.0.0",
 	"description": "hi",
 	"author": {
-		"name": "stivengiv",
-		"email": "aaaaaaa",
-		"url": "https://stivengiv.github.io/mp3/"
+		"name": "eltrevii",
+		"email": "a@a.com",
+		"url": "https://eltrevii.github.io/megathread/"
 	},
 	"contributors": [
 		{
-			"name": "stivengiv",
-			"email": "aaaaaa",
-			"url": "https://stivengiv.github.io/mp3"
+			"name": "eltrevii",
+			"email": "a@a.com",
+			"url": "https://eltrevii.github.io/megathread"
 		}
 	],
 	"scripts": {
@@ -24,13 +24,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/stivengiv/mp3"
+		"url": "git+https://github.com/eltrevii/megathread"
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/stivengiv/mp3/issues"
+		"url": "https://github.com/eltrevii/megathread/issues"
 	},
-	"homepage": "https://github.com/stivengiv/mp3",
+	"homepage": "https://github.com/eltrevii/megathread",
 	"dependencies": {
 		"@11ty/eleventy": "1.0.1",
 		"clean-css": "^5.3.0",
