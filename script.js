@@ -22,7 +22,7 @@ window.onload = function() {
     arraytxt.forEach(txt => txt.innerText = "[bloqueado]")
     
     check = function(val) {
-      if (val.value == "tABDUSCAN" || val.value == "ABDUSCAN") {
+      if (val.value == "tSHUTUP" || val.value == "SHUTUP") {
           val.remove();
           document.querySelectorAll("details[disabled='']").forEach(el => el.removeAttribute("disabled"))
           document.querySelectorAll(".wrapper").forEach(el => el.removeAttribute("class"))
