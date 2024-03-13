@@ -53,7 +53,7 @@ window.onload = function() {
     //[...code].forEach(el => el.textContent = removell(el.textContent));
     //[...code].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
     // more js HERE
-    mttxt = ""
+    mttxt = document.body
     for (i = 65; i <= 90; i++) { // 
       mttxt[i] = document.createElement("a")
       mttxt[i].setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
