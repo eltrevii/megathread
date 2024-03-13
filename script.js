@@ -53,4 +53,9 @@ window.onload = function() {
     //[...code].forEach(el => el.textContent = removell(el.textContent));
     //[...code].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
     // more js HERE
-};
+    for (i = 65; i <= 90; i++) { // String.fromCharCode(i)
+      mttxt[i] = document.createElement("a")
+      mttxt[i].href = "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + i.toLowerCase() + ".html"
+      document.querySelector("#multitracks").appendChild(mttxt[i])
+    }
+  };
