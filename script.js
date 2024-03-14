@@ -58,6 +58,6 @@ window.onload = function() {
       mttxt[i] = document.createElement("a")
       mttxt[i].setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
       mttxt[i].innerText = "  - LETRA " + String.fromCharCode(i) + "\n"
-      document.querySelector("#multitracks").appendChild(mttxt[i])
+      document.querySelector("#multitracks pre").appendChild(mttxt[i])
     }
   };
