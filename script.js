@@ -3,7 +3,7 @@ window.onload = function() {
   for (i = 65; i <= 90; i++) {
     mttxt = document.createElement("a")
     mttxt.setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
-    sel.innerText += "  - "
+    mtpre.innerText += "  - "
     mttxt.innerText = "LETRA " + String.fromCharCode(i) + "\n"
     document.querySelector("#multitracks pre").appendChild(mttxt.cloneNode(true))
   }
