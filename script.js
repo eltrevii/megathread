@@ -1,11 +1,11 @@
 window.onload = function() {
   mtpre = document.querySelector("#multitracks pre")
-  for (i = 65; i <= 90; i++) {
-    mttxt = document.createElement("a")
+  for (var i = 65; i <= 90; i++) {
+    var mttxt = document.createElement("a")
     mttxt.setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
-    mtpre.innerText += "  - "
+    mtpre.innerHTML += "  - "
     mttxt.innerText = "LETRA " + String.fromCharCode(i) + "\n"
-    document.querySelector("#multitracks pre").appendChild(mttxt.cloneNode(true))
+    mtpre.appendChild(mttxt)
   }
 
     const details = document.querySelectorAll("details");
