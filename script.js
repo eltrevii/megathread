@@ -4,8 +4,9 @@ window.onload = function() {
     var mttxt = document.createElement("a")
     mttxt.setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
     mtpre.innerHTML += "  - "
-    mttxt.innerText = "LETRA " + String.fromCharCode(i) + "\n"
+    mttxt.innerText = "LETRA " + String.fromCharCode(i)
     mtpre.appendChild(mttxt)
+    mtpre.innerHTML += "\n"
   }
 
     const details = document.querySelectorAll("details");
