@@ -1,4 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+#bg {
+  z-index: -100;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 120%;
+  height: 120%;
+  min-width: 100%;
+  min-height: 100%;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0;
+}
+
+#bg-col-parent {
+  z-index: -99;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 120%;
+  height: 120%;
+  min-width: 100%;
+  min-height: 100%;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0;
+  background-color: #000;
+  opacity: 0.95;
+}
+
+#video {
+  padding: 0;
+  margin: 0;
+}
 
 details summary { 
   cursor: pointer;
@@ -9,14 +50,18 @@ details summary > * {
 }
 
 details {
-  border: 1px solid #555;
+  border: 1px solid #55555500;
+  /*outline: 2px solid #555;
+  outline-offset: -2px;*/
+  box-sizing: content-box;
   border-radius: 4px;
-  padding: 0.5em 0.5em 0;
+  /*padding: 0.5em 0.5em 0 0.5em;*/
   transition: 300ms;
   line-height: 25px;
   margin-bottom: 0.5em;
   margin-top: -1em;
   background-color: #222;
+  transition: 300ms;
 }
 
 details:not([disabled]):hover {
@@ -26,27 +71,33 @@ details:not([disabled]):hover {
 
 summary {
   font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5rem;
-  padding-left: 1.5rem;
+  /*margin: -0.5em -0.5em 0 -0.5em;*/
+  padding: 0.3rem 0.3rem 0.3rem 1.4rem;
   display: block;
   position: relative;
+  transition: 300ms;
 }
 
 details[open] {
-  padding: 0.5em;
+  padding: 0rem;
   margin-top: -1em;
   background-color: #444;
+  transition: 300ms;
 }
 
 details[open] summary {
-  border-bottom: 1px solid #555;
-  margin-bottom: 0.5em;
+  border-bottom: 2px solid #888;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.6rem;
   background-color: #555;
+  border-radius: 3px;
+  transition: 300ms;
 }
 
 details + details {
-  margin-top: 10px !important;
+  margin-top: -3px !important;
 }
 
 a {
@@ -89,18 +140,42 @@ a:hover::before {
 
 body {
   font-family: 'Google Sans', sans-serif;
-  padding: 11px 20px;
+  padding: 0rem 20vw;
+  margin-top: -0.5rem;
   background-color: black;
   color: lightgray;
+  transition: 300ms;
+}
+
+body h1 {
+  font-family: 'Iceberg', sans-serif;
+  margin-block-start: 0.8rem;
+  margin-block-end: 1rem;
+}
+
+summary {
+  font-family: 'Funnel Display', sans-serif;
+  outline: 2px solid #555;
+  outline-offset: -2px;
+  border-radius: 3px;
 }
 
 pre {
-  line-height: 15px;
+  line-height: 16px;
   background-color: #393939;
-  padding: 10px 10px 10px 0;
-  margin-right: 15px;
-  margin-left: 15px;
+  padding: 0.5rem 0em 0.5rem 0em;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-block-start: -0.1rem;
+  margin-block-end: 0.6rem;
   border-radius: 5px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  display: block;
+  /*width: 100%;*/
+  box-sizing: border-box !important;
+  transition: 300ms;
 }
 
 details:not([disabled]) summary:before {
@@ -109,19 +184,21 @@ details:not([disabled]) summary:before {
   border-style: solid;
   border-color: transparent transparent transparent #fff;
   position: absolute;
-  top: 0.9rem;
-  left: 0.7rem;
+  top: 0.7rem;
+  left: 0.6rem;
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
   transition: 0.25s transform ease;
 }
 
 details[disabled] summary:before {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   content: "🔒";
   position: absolute;
-  top: 0.5rem;
-  left: 0.4rem;
+  
+  top: 0.4rem;
+  left: 0.3rem;
+  
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
 }

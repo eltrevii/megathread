@@ -33,7 +33,7 @@ window.onload = function() {
     
     check = function(val) {
       if (val.value == "tSHUTUP" || val.value == "SHUTUP") {
-          val.remove();
+          //val.remove();
           document.querySelectorAll("details[disabled='']").forEach(el => el.removeAttribute("disabled"))
           document.querySelectorAll(".wrapper").forEach(el => el.removeAttribute("class"))
           arraytxt.forEach(function (txt, i) { txt.innerText = arrayorg[i] })
@@ -46,7 +46,8 @@ window.onload = function() {
     document.onkeyup = function(e) {
     var input = document.getElementById('pass');
       if (input.style.display == 'none') {
-          input.value += String.fromCharCode(e.keyCode || e.which);
+          //input.value += String.fromCharCode(e.keyCode || e.which);
+          input.value += e.key || e.code
 	  check(document.querySelectorAll("input")[0])
       }
     };
