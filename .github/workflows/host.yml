@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules-v1
         with:
@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-
             
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: 16
           
@@ -45,13 +45,13 @@ jobs:
 
     steps:
       - name: Checkout with submodules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           submodules: true # Install themes
           fetch-depth: 0 # We need all history for .GitInfo and .Lastmod
           
       - name: Restore node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules-v1
         with:
@@ -64,7 +64,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
           
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: 16
 
@@ -74,7 +74,7 @@ jobs:
       - run: rm -rf ./node_modules/
       
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
@@ -90,4 +90,5 @@ jobs:
     steps:    
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
+
