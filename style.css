@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 #bg {
   z-index: -100;
@@ -120,7 +121,7 @@ a {
 }
 
 a:link {
-  color: #07f;
+  color: #03f;
 }
 
 a:visited {
@@ -154,7 +155,7 @@ a:hover::before {
 body {
   font-family: 'Google Sans', sans-serif;
   padding: 0rem 20vw;
-  margin-top: -0.5rem;
+  /*margin-top: -0.5rem;*/
   background-color: black;
   color: lightgray;
   transition: 300ms;
@@ -174,7 +175,9 @@ summary {
 }
 
 pre {
-  line-height: 16px;
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   background-color: #393939;
   padding: 0.4rem 0;
   margin-right: 0.5rem;
