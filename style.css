@@ -3,6 +3,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body {
+  font-family: 'Google Sans', sans-serif;
+  padding: 0rem 20vw;
+  /*margin-top: -0.5rem;*/
+  background-color: black;
+  color: lightgray;
+  transition: 300ms;
+}
+
+body h1 {
+  font-family: 'Iceberg', sans-serif;
+  margin-block-start: 0.8rem;
+  margin-block-end: 1rem;
+}
+
+summary {
+  font-family: 'Funnel Display', sans-serif;
+  outline: 2px solid #555;
+  outline-offset: -2px;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #393939;
+  padding: 0.4rem 0;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-block-start: -0.1rem;
+  margin-block-end: 0.6rem;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  display: block;
+  /*width: 100%;*/
+  box-sizing: border-box !important;
+  transition: 300ms;
+}
+
+.mouseover {
+  text-decoration: dotted underline;
+  color: #bbb;
+}
+
 #bg {
   z-index: -100;
   position: fixed;
@@ -135,6 +182,7 @@ a:hover {
   /*outline: 3px solid #07f;*/
   border-radius: 1px;
 }
+
 /*
 a::before {
   content: "";
@@ -151,48 +199,6 @@ a::before {
 a:hover::before {
   transform: scaleX(1);
 }*/
-
-body {
-  font-family: 'Google Sans', sans-serif;
-  padding: 0rem 20vw;
-  /*margin-top: -0.5rem;*/
-  background-color: black;
-  color: lightgray;
-  transition: 300ms;
-}
-
-body h1 {
-  font-family: 'Iceberg', sans-serif;
-  margin-block-start: 0.8rem;
-  margin-block-end: 1rem;
-}
-
-summary {
-  font-family: 'Funnel Display', sans-serif;
-  outline: 2px solid #555;
-  outline-offset: -2px;
-  border-radius: 3px;
-}
-
-pre {
-  font-family: 'Space Mono', monospace, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  background-color: #393939;
-  padding: 0.4rem 0;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  margin-block-start: -0.1rem;
-  margin-block-end: 0.6rem;
-  border-radius: 3px;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-x: auto;
-  display: block;
-  /*width: 100%;*/
-  box-sizing: border-box !important;
-  transition: 300ms;
-}
 
 details:not([disabled]) summary:before {
   content: "";
