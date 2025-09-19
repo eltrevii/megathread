@@ -45,9 +45,10 @@ pre {
   transition: 300ms;
 }
 
-.mouseover {
-  text-decoration: dotted underline;
+span[title] {
   color: #bbb;
+  text-decoration: dotted underline;
+  cursor: help;
 }
 
 #bg {
