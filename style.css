@@ -46,6 +46,7 @@ body {
   background-color: black;
   color: lightgray;
   transition: var(--transition);
+  -webkit-tap-highlight-color: #7777ff33 !important;
 }
 
 body h1 {
