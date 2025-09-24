@@ -12,13 +12,15 @@
 
   --radius-default: 4px;
 
-  --transition: 150ms;
+  --transition: 230ms;
   --transition-fast: 150ms;
+
+  --bg-opacity: 0.3;
 }
 
 canvas {
   z-index: -900;
-  opacity: 0.2;
+  opacity: var(--bg-opacity);
 }
 
 body {
@@ -77,7 +79,7 @@ code {
   outline: 2px solid #444;
   border-radius: var(--radius-default);
 }
-
+/* 
 #bg {
   z-index: -100;
   position: fixed;
@@ -109,14 +111,14 @@ code {
   margin-right: -1rem;
   padding: 0;
   background-color: #000;
-  opacity: 0.9;
+  opacity: calc(1 - var(--bg-opacity));
 }
 
 #video {
   padding: 0;
   margin: 0;
 }
-
+*/
 details summary { 
   cursor: pointer;
 }
