@@ -264,3 +264,29 @@ details[disabled] summary {
 .wrapper {
   cursor: not-allowed;
 }
+
+#pass {
+  color: #ccc;
+  background-color: #555;
+  border: 2px dashed yellow;
+  border-radius: 3px;
+  width: 100%;
+  opacity: 0;
+  transition: 150ms;
+}
+
+#pass:hover {
+  opacity: 0.5;
+  transition: 150ms;
+}
+
+#pass:focus {
+  outline-width: 0;
+  border: 3px solid yellow;
+  transition: 150ms;
+}
+
+#pass:disabled {
+  display: none;
+  transition: 150ms;
+}
