@@ -16,6 +16,11 @@
   --transition-fast: 150ms;
 }
 
+canvas {
+  z-index: -900;
+  opacity: 0.2;
+}
+
 body {
   font-family: var(--font-body), sans-serif;
   padding: 0rem 20vw;
