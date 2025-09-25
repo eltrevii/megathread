@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+:root {
+  --font-h1:      'Funnel Display';
+  --font-summary: 'Chakra Petch';
+  --font-body:    'Google Sans';
+  --font-mono:    'Space Mono';
+
+  --radius-default: 4px;
+
+  --transition: 230ms;
+  --transition-fast: 150ms;
+
+  --details-bg-color: 51, 51, 51;
+  --summary-bg-color: #555;
+
+  --bg-opacity: 0.5;
+}
+
+details {
+    backdrop-filter: blur(10px);
+    background: rgba(var(--details-bg-color), 0.7);
+}

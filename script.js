@@ -70,6 +70,18 @@ window.onload = function() {
           document.querySelector("#pass").setAttribute("disabled", "")
       }
     }
+    
+    checkbox = function(elem) {
+      if (elem.checked) {
+        document.querySelector("#style2").removeAttribute("disabled")
+        document.querySelector(".content--canvas").removeAttribute("disabled")
+      } else if (!elem.checked) {
+        document.querySelector("#style2").setAttribute("disabled", "")
+        document.querySelector(".content--canvas").setAttribute("disabled", "")
+      }
+    }
+
+    checkbox(document.querySelector("#fancy-checkbox"))
 
     /*
     document.onkeyup = function(e) {

@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
-
 :root {
-  --font-h1:      'Funnel Display';
-  --font-summary: 'Chakra Petch';
+  --font-h1:      'Century Gothic', 'Helvetica', 'Verdana', 'Calibri';
+  --font-summary: 'Bahnscrift', 'Trebuchet MS', 'Franklin Gothic', var(--font-h1);
   --font-body:    'Google Sans';
   --font-mono:    'Space Mono';
 
@@ -15,7 +9,10 @@
   --transition: 230ms;
   --transition-fast: 150ms;
 
-  --bg-opacity: 0.3;
+  --details-bg-color: #333;
+  --summary-bg-color: #555;
+
+  --bg-opacity: 0.5;
 }
 
 @media only screen
@@ -38,6 +35,20 @@ and (min-width: 1100px) {
 canvas {
   z-index: -900;
   opacity: var(--bg-opacity);
+}
+
+.content--canvas {
+  display: initial;
+  visibility: visible;
+  opacity: 1;
+  transition: 300ms;
+}
+
+.content--canvas[disabled] {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
 }
 
 body {
@@ -96,6 +107,24 @@ code {
   outline: 2px solid #444;
   border-radius: var(--radius-default);
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 2fr));
+  align-items: center;
+}
+
+#fancytoggle {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-self: right;
+}
+
+#fancytoggle > input {
+  width: 1.5rem;
+  justify-self: center;
+}
+
 /* 
 #bg {
   z-index: -100;

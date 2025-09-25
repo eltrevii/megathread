@@ -1,7 +1,8 @@
 <script src="script.js"></script>
 
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" id="style1">
+  <link rel="stylesheet" href="style-fancy.css" id="style2" disabled>
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <title>trevi's megathread</title>
   <meta property="og:image" content="https://eltrevii.github.io/megathread/media/banner_v1.png" />
@@ -28,14 +29,20 @@
 -->
 
 
-  <div class="content content--canvas" tabindex="0" style="z-index: -999;">
+  <div class="content content--canvas" tabindex="0" style="z-index: -900 !important; position: absolute;" disabled>
   </div>
 
   <script src="js/noise.min.js"></script>
 	<script src="js/util.js"></script>
 	<script src="js/shift.js"></script>
 
-  <h1>counter-strike 2</h1>
+  <div class="grid">
+    <h1>counter-strike 2</h1>
+    <div id="fancytoggle">
+      <p>fancy style</p>
+      <input id="fancy-checkbox" type="checkbox" onclick="checkbox(this)" checked>
+    </div>
+  </div>
 
   <details>
   <summary><h3>mods/configs</h3></summary><pre>
