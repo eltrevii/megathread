@@ -20,8 +20,9 @@
 
   --bg-opacity: 0.5;
 }
-
+/*
 details {
     backdrop-filter: blur(10px);
     background: rgba(var(--details-bg-color), 0.7);
 }
+*/
