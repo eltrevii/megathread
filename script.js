@@ -1,5 +1,6 @@
 window.onload = function() {
   mtpre = document.querySelector("#multitracks pre")
+  // for letters a to z (character codes, retrieved in L8:34)
   for (var i = 65; i <= 90; i++) {
     var mttxt = document.createElement("a")
     mttxt.setAttribute("href", "https://multitrackdownloads.blogspot.com/2012/03/multitracks-" + String.fromCharCode(i).toLowerCase() + ".html")
@@ -9,6 +10,7 @@ window.onload = function() {
     mtpre.innerHTML += "\n"
   }
 
+    // #region details - closes all other <details> when one is opened
     const details = document.querySelectorAll("details");
 
     details.forEach((targetDetail) => {
@@ -20,17 +22,21 @@ window.onload = function() {
         });
       });
     })
+    // #endregion
 
+    // add [ ] at the start/end of links (lambda x: "[" + x + "]")
     document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
     document.querySelectorAll("a").forEach(el => el.setAttribute("target", "_blank"))
 
+    // retrieve text from all disabled (locked) <details> summary texts
     var arraytxt = []
     var arrayorg = []
     document.querySelectorAll("details[disabled] summary").forEach(el => arraytxt.push(el))
     document.querySelectorAll("details[disabled] summary").forEach(el => arrayorg.push(el.innerText))
-    
+    // set text of all disabled/locked <details> to str
     arraytxt.forEach(txt => txt.innerText = "[bloqueado]")
     
+    // https://stackoverflow.com/a/2664055
     function getStyle(el, styleProp) {
       var value, defaultView = (el.ownerDocument || document).defaultView;
       // W3C standard way:
@@ -61,6 +67,7 @@ window.onload = function() {
       }
     }
 
+    // check if password matches
     check = function(val) {
       if (val.value == "tSHUTUP" || val.value == "SHUTUP") {
           //val.remove();
@@ -70,7 +77,8 @@ window.onload = function() {
           document.querySelector("#pass").setAttribute("disabled", "")
       }
     }
-    
+
+    // check checkbox status to enable/disable fancy style
     checkbox = function(elem) {
       if (elem.checked) {
         document.querySelector("#style2").removeAttribute("disabled")
@@ -81,6 +89,9 @@ window.onload = function() {
       }
     }
 
+    // run check when the page starts because the checkbox
+    //   is checked by default and elements are disabled
+    //   by default, so this fixes that
     checkbox(document.querySelector("#fancy-checkbox"))
 
     /*
