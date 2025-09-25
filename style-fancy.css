@@ -14,6 +14,7 @@
 
   --transition: 230ms;
   --transition-fast: 150ms;
+  --arrow-transition: 250ms transform ease;
 
   --details-bg-color: 51, 51, 51;
   --summary-bg-color: #555;
@@ -26,3 +27,7 @@ details {
     background: rgba(var(--details-bg-color), 0.7);
 }
 */
+
+.grid {
+  backdrop-filter: blur(10px);
+}

@@ -6,8 +6,9 @@
 
   --radius-default: 4px;
 
-  --transition: 230ms;
-  --transition-fast: 150ms;
+  --transition: 0ms;
+  --transition-fast: 0ms;
+  --arrow-transition: 0ms;
 
   --details-bg-color: #333;
   --summary-bg-color: #555;
@@ -108,16 +109,35 @@ code {
   border-radius: var(--radius-default);
 }
 
+.pregrid {
+  z-index: 100;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+}
+
 .grid {
+  border-radius: calc(var(--radius-default)*2);
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 2fr));
+
+  background-color: rgba(51, 51, 51, 0.7);
+  border: 10px solid rgba(51, 51, 51, 0.7);
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  -webkit-background-clip: padding-box; /* for Safari */
+  grid-template-columns: 7fr 3fr;
   align-items: center;
+  justify-items: left;
 }
 
 #fancytoggle {
   display: grid;
+  background-color: #555;
+  border-radius: var(--radius-default);
+  border-left: 6px solid #555;
   grid-template-columns: 2fr 1fr;
   justify-self: right;
+  margin-right: 6px;
 }
 
 #fancytoggle > input {
@@ -293,7 +313,7 @@ details:not([disabled]) summary:before {
   left: 0.6rem;
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
-  transition: 0.25s transform ease;
+  transition: var(--arrow-transition);
 }
 
 details[disabled] summary:before {
@@ -301,7 +321,7 @@ details[disabled] summary:before {
   content: "🔒";
   position: absolute;
   
-  top: 0.4rem;
+  top: 0.3rem;
   left: 0.3rem;
   
   transform: rotate(0);
