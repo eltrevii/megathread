@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     loader: 'akamai',
     path: '',
   },
+  allowedDevOrigins: ['127.0.0.1']
 };
 
 export default nextConfig;
