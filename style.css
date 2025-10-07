@@ -18,7 +18,7 @@
   --navbar-border-color: rgba(51, 51, 51, 1);
   --navbar-ftoggle-color: none;
 
-  --hover-bg: #35f;
+  --hover-bg: #3355ff77;
 
   --bg-opacity: 0.5;
 }
@@ -114,7 +114,7 @@ code {
   border: 10px solid var(--navbar-border-color);
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   -webkit-background-clip: padding-box; /* for Safari */
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 4fr 4fr 2fr;
   align-items: center;
   justify-items: left;
 }
@@ -222,12 +222,12 @@ details + details {
   margin-top: -3px !important;
 }
 
-a:link {
+a:not(.grid a):link {
   color: #35f;
   font-weight: bold;
 }
 
-a:hover {
+a:not(.grid a):hover {
   color: #cef;
   background-color: var(--hover-bg);
   /*outline: 2px solid #57f;*/
@@ -235,18 +235,18 @@ a:hover {
   transition: var(--transition);
 }
 
-a:visited {
+a:not(.grid a):visited {
 /*color: #0ff;*/
   color: #55f;
 }
 
-a:visited:hover {
+a:not(.grid a):visited:hover {
   color: #bbf;
   background-color: #55f;
 }
 
 /*
-a::before {
+a:not(.grid a)::before {
   content: "";
   position: absolute;
   display: block;

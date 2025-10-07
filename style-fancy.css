@@ -24,7 +24,7 @@
   --navbar-border-color: rgba(50, 50, 50, 0.75);
   --navbar-ftoggle-color: rgba(70, 70, 70, 0.5);
 
-  --hover-bg: #3355ff33;
+  --hover-bg: #35f;
 
   --bg-opacity: 0.5;
 }
@@ -114,9 +114,14 @@ details:not([disabled])[open]:hover {
   background-color: #333;
 }
 
-a {
+a:not(.grid a) {
   position: relative;
   text-decoration: none;
   transition: var(--transition);
   text-transform: lowercase;
+}
+
+.grid a {
+  text-decoration: dotted underline;
+  color: #bbb;
 }

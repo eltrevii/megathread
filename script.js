@@ -25,8 +25,8 @@ window.onload = function() {
     // #endregion
 
     // add [ ] at the start/end of links (lambda x: "[" + x + "]")
-    document.querySelectorAll("a").forEach(el => el.textContent = "[" + el.textContent + "]")
-    document.querySelectorAll("a").forEach(el => el.setAttribute("target", "_blank"))
+    document.querySelectorAll("a:not(.grid a)").forEach(el => el.textContent = "[" + el.textContent + "]")
+    document.querySelectorAll("a:not(.grid a)").forEach(el => el.setAttribute("target", "_blank"))
 
     // retrieve text from all disabled (locked) <details> summary texts
     var arraytxt = []
