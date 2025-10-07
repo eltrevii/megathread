@@ -110,7 +110,7 @@ code {
 */
 .grid {
   z-index: 100;
-  display: grid;
+  display: flex;
   position: static;
   margin-top: 1.1rem;
   padding: 0 1rem;
@@ -118,16 +118,19 @@ code {
   border: 10px solid var(--navbar-border-color);
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   -webkit-background-clip: padding-box; /* for Safari */
-  grid-template-columns: 3.6fr 4.65fr 1.75fr;
+  /*grid-template-columns: 4fr 4.25fr 1.75fr;*/
+  /*grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));*/
+  gap: 0.5em;
   align-items: center;
   justify-items: left;
+  justify-content: space-between;
 }
 
 #fancytoggle {
   display: grid;
   background-color: var(--navbar-ftoggle-color);
   grid-template-columns: 2fr 1fr;
-  justify-self: right;
+  justify-self: flex-end;
   border-radius: calc(var(--radius-default) * 3);
 }
 
