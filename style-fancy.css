@@ -24,6 +24,10 @@
   --navbar-border-color: rgba(50, 50, 50, 0.75);
   --navbar-ftoggle-color: rgba(70, 70, 70, 0.5);
 
+  --navbar-a-highlight-color: #f83;
+  --navbar-a-color: #fb3;
+  --navbar-a-bg-color: transparent;
+
   --hover-bg: #35f;
 
   --bg-opacity: 0.5;
@@ -132,9 +136,9 @@ a:not(.grid a) {
 }
 
 .grid a:hover {
-  color: #fb3;
+  color: var(--navbar-a-color);
   text-decoration: none;
-  text-shadow: 1px 1px 5px #fb3;
+  text-shadow: 1px 1px 5px var(--navbar-a-color);
   transition: var(--transition-fast);
 }
 

@@ -17,6 +17,10 @@
   --navbar-color: rgba(51, 51, 51, 1);
   --navbar-border-color: rgba(51, 51, 51, 1);
   --navbar-ftoggle-color: none;
+  
+  --navbar-a-highlight-color: #f83;
+  --navbar-a-color: #fb3;
+  --navbar-a-bg-color: #ffbb3377;
 
   --hover-bg: #3355ff77;
 
@@ -243,6 +247,10 @@ a:not(.grid a):visited {
 a:not(.grid a):visited:hover {
   color: #bbf;
   background-color: #55f;
+}
+
+.grid a[current] {
+  color: var(--navbar-a-highlight-color);
 }
 
 /*
