@@ -24,7 +24,7 @@ jobs:
         with:
           path: |
             ~/.npm
-            node_modules
+            ./legacy/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -34,7 +34,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: 16
+          node-version: 18
           
       - name: Install Node.js dependencies
         run: npm i
@@ -57,8 +57,8 @@ jobs:
         with:
           path: |
             ~/.npm
-            node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+            ./legacy/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('legacy/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -69,7 +69,7 @@ jobs:
           node-version: 16
 
       - name: Build the website
-        run: npm run build
+        run: cd legacy && npm run build
         
       - run: rm -rf ./node_modules/
       
