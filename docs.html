@@ -1,0 +1,63 @@
+<head>
+  <title>trevi's megathread</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+  <!-- #region stylesheets -->
+  <link rel="stylesheet" href="style.css" id="style1">
+  <link rel="stylesheet" href="style-fancy.css" id="style2" disabled>
+  <!-- #endregion -->
+
+  <!-- #region scripts -->
+  <script src="script.js"></script>
+  <!-- #endregion -->
+
+  <!-- #region web embed card -->
+  <meta property="og:image" content="https://eltrevii.github.io/megathread/media/banner_v1.png" />
+  <meta property="og:site_name" content="onlydrums" />
+  <meta property="og:type" content="object" />
+  <meta property="og:title" content="trevi's megathread" />
+  <meta property="og:url" content="https://eltrevii.github.io/megathread" />
+  <meta property="og:description" content="lista de cosas utiles e interesantes" />
+  <!-- #endregion -->
+
+  <!-- #region twitter-specific -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- #endregion -->
+</head>
+
+<body>
+<!-- 
+  <div id="bg-col-parent">
+    <div id="bg-col"></div>
+  </div>
+
+  <div id="bg">
+    <video autoplay muted loop id="video">
+      <source src="media/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+-->
+
+  <!-- #region background - from https://tympanus.net/Development/AmbientCanvasBackgrounds/index3.html -->
+  <div class="content content--canvas" tabindex="0" style="z-index: -900 !important; position: absolute;" disabled>
+  </div>
+
+  <script src="js/noise.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/shift.js"></script>
+  <!-- #endregion -->
+
+
+  <div class="grid">
+    <h1 id="site-title">trevi's megathread</h1>
+    <div id="nb-links">
+      <a href="/megathread">home</a>
+      <a href="docs.html" current>docs</a>
+    </div>
+    <div id="fancytoggle">
+      <p>fancy style</p>
+      <input id="fancy-checkbox" type="checkbox" onclick="checkbox(this)" checked>
+    </div>
+  </div>
+
+</body>

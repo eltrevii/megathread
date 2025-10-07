@@ -138,7 +138,7 @@ a:not(.grid a) {
 .grid a:hover {
   color: var(--navbar-a-color);
   text-decoration: none;
-  text-shadow: 1px 1px 5px var(--navbar-a-color);
+  text-shadow: 0px 0px 5px var(--navbar-a-color);
   transition: var(--transition-fast);
 }
 
