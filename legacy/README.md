@@ -1,4 +1,4 @@
-# megathread
+# megathread (vite)
 ### page link: https://eltrevii.github.io/megathread
 
 ## github workflows
