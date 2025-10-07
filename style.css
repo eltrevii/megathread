@@ -114,7 +114,7 @@ code {
   border: 10px solid var(--navbar-border-color);
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   -webkit-background-clip: padding-box; /* for Safari */
-  grid-template-columns: 4fr 4fr 2fr;
+  grid-template-columns: 3.6fr 4.65fr 1.75fr;
   align-items: center;
   justify-items: left;
 }

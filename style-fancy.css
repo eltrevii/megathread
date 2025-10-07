@@ -122,6 +122,22 @@ a:not(.grid a) {
 }
 
 .grid a {
-  text-decoration: dotted underline;
+  font-size: 18px;
+  font-family: var(--font-summary);
+  font-weight: bold;
+  text-decoration: none /*dotted underline*/;
+  text-underline-offset: 2px;
   color: #bbb;
+  transition: var(--transition-fast);
+}
+
+.grid a:hover {
+  color: #fb3;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px #fb3;
+  transition: var(--transition-fast);
+}
+
+#nb-links a + a {
+  margin-left: 0.3rem;
 }
