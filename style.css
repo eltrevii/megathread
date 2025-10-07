@@ -274,6 +274,7 @@ a {
   position: relative;
   text-decoration: none;
   transition: var(--transition);
+  text-transform: lowercase;
 }
 
 a:link {
