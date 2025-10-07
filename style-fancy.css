@@ -11,6 +11,7 @@
   --font-mono:    'Space Mono';
 
   --radius-default: 4px;
+  --radius-blur: 10px;
 
   --transition: 230ms;
   --transition-fast: 150ms;
@@ -23,8 +24,28 @@
   --navbar-border-color: rgba(50, 50, 50, 0.5);
   --navbar-ftoggle-color: rgba(70, 70, 70, 0.5);
 
+  --hover-bg: #3355ff33;
+
   --bg-opacity: 0.5;
 }
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 1100px) {
+  body {
+    padding: 0vw 2vw;
+    transition: 100ms !important;
+  }
+}
+
+@media only screen
+and (min-width: 1100px) {
+  body {
+    padding: 0rem 20vw;
+    transition: 100ms !important;
+  }
+}
+
 /*
 details {
     backdrop-filter: blur(10px);
@@ -33,7 +54,7 @@ details {
 */
 
 .grid {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--radius-blur));
   border-radius: calc(var(--radius-default) * 4);
   position: sticky;
   top: 1.1rem;
@@ -46,4 +67,54 @@ details {
   border-right: 4px solid var(--navbar-ftoggle-color);
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   -webkit-background-clip: padding-box; /* for Safari */
+}
+
+pre {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+details {
+  border: 1px solid #55555500;
+}
+
+summary {
+  outline: 2px solid #555;
+  outline-offset: -2px;
+}
+
+details[open] summary {
+  border-bottom: 2px solid #888;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.6rem;
+  background-color: #555;
+  border-radius: var(--radius-default);
+  transition: var(--transition);
+}
+
+details:not([disabled]):not([open]):hover {
+  background-color: #444;
+  transition: var(--transition);
+}
+
+details:not([disabled])[open]:hover summary {
+  background-color: #444;
+  outline: 2px solid #444;
+}
+
+details:not([disabled])[open]:hover pre {
+  background-color: #222;
+}
+
+details:not([disabled])[open]:hover {
+  background-color: #333;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  transition: var(--transition);
+  text-transform: lowercase;
 }

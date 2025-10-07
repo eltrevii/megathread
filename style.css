@@ -4,7 +4,8 @@
   --font-body:    'Google Sans';
   --font-mono:    'Space Mono';
 
-  --radius-default: 4px;
+  --radius-default: 0x;
+  --radius-blur: 0px;
 
   --transition: 0ms;
   --transition-fast: 0ms;
@@ -17,24 +18,9 @@
   --navbar-border-color: rgba(51, 51, 51, 0.7);
   --navbar-ftoggle-color: none;
 
+  --hover-bg: #35f;
+
   --bg-opacity: 0.5;
-}
-
-@media only screen
-and (min-width: 320px)
-and (max-width: 1100px) {
-  body {
-    padding: 0vw 2vw;
-    transition: 100ms !important;
-  }
-}
-
-@media only screen
-and (min-width: 1100px) {
-  body {
-    padding: 0rem 20vw;
-    transition: 100ms !important;
-  }
 }
 
 canvas {
@@ -73,8 +59,6 @@ body h1 {
 
 summary {
   font-family: var(--font-summary), sans-serif;
-  outline: 2px solid #555;
-  outline-offset: -2px;
   border-radius: var(--radius-default);
 }
 
@@ -84,8 +68,6 @@ pre {
   line-height: 20px;
   background-color: #393939;
   padding: 0.4rem 0;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   margin-block-start: -0.1rem;
   margin-block-end: 0.6rem;
   border-radius: var(--radius-default);
@@ -207,7 +189,6 @@ details summary > * {
 }
 
 details {
-  border: 1px solid #55555500;
   /*outline: 2px solid #555;
   outline-offset: -2px;*/
   box-sizing: content-box;
@@ -219,24 +200,6 @@ details {
   margin-top: -1em;
   background-color: #333;
   transition: var(--transition);
-}
-
-details:not([disabled]):not([open]):hover {
-  background-color: #444;
-  transition: var(--transition);
-}
-
-details:not([disabled])[open]:hover summary {
-  background-color: #444;
-  outline: 2px solid #444;
-}
-
-details:not([disabled])[open]:hover pre {
-  background-color: #222;
-}
-
-details:not([disabled])[open]:hover {
-  background-color: #333;
 }
 
 summary {
@@ -255,26 +218,8 @@ details[open] {
   transition: var(--transition);
 }
 
-details[open] summary {
-  border-bottom: 2px solid #888;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.6rem;
-  background-color: #555;
-  border-radius: var(--radius-default);
-  transition: var(--transition);
-}
-
 details + details {
   margin-top: -3px !important;
-}
-
-a {
-  position: relative;
-  text-decoration: none;
-  transition: var(--transition);
-  text-transform: lowercase;
 }
 
 a:link {
@@ -284,7 +229,7 @@ a:link {
 
 a:hover {
   color: #cef;
-  background-color: #35f;
+  background-color: var(--hover-bg);
   /*outline: 2px solid #57f;*/
   border-radius: 1px;
   transition: var(--transition);
