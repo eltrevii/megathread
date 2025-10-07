@@ -141,3 +141,7 @@ a:not(.grid a) {
 #nb-links a + a {
   margin-left: 0.3rem;
 }
+
+#fancytoggle p {
+  font-family: var(--font-summary);
+}
