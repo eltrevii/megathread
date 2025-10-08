@@ -37,7 +37,7 @@ jobs:
           node-version: 18
           
       - name: Install Node.js dependencies
-        run: npm i
+        run: cd legacy && npm i
         
   build:
     needs: install
@@ -91,4 +91,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
