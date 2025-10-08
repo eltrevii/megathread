@@ -95,6 +95,7 @@ details[open] summary {
   background-color: #555;
   border-radius: var(--radius-default);
   transition: var(--transition);
+  outline-offset: -2px;
 }
 
 details:not([disabled]):not([open]):hover {
