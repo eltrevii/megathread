@@ -83,7 +83,7 @@ details {
 
 summary {
   outline: 2px solid #555;
-  outline-offset: -2px;
+  outline-offset: -1px;
 }
 
 details[open] summary {
