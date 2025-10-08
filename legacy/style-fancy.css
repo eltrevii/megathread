@@ -63,6 +63,7 @@ details {
   border-right: 4px solid var(--navbar-ftoggle-color);
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   -webkit-background-clip: padding-box; /* for Safari */
+  border-radius: calc(var(--radius-default) * 2);
 }
 
 pre {

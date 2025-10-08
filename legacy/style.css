@@ -131,7 +131,6 @@ code {
   background-color: var(--navbar-ftoggle-color);
   grid-template-columns: 2fr 1fr;
   justify-self: flex-end;
-  border-radius: calc(var(--radius-default) * 3);
 }
 
 #fancytoggle > input {
