@@ -48,6 +48,12 @@ details {
 */
 
 .grid {
+  background-color: var(--navbar-color);
+  border: 10px solid var(--navbar-border-color);
+  margin-top: 1.1rem;
+  padding: 0 1rem;
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  -webkit-background-clip: padding-box; /* for Safari */
   backdrop-filter: blur(var(--radius-blur));
   transform: translateZ(0);
   will-change: filter;
