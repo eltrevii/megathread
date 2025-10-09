@@ -25,6 +25,16 @@
   --hover-bg: #3355ff77;
 
   --bg-opacity: 0.5;
+
+  font-family: var(--font-body), sans-serif;
+
+  color-scheme: dark;
+  color: lightgray;
+  background-color: black;
+  
+  -webkit-tap-highlight-color: #7777ff33 !important;
+  transition: var(--transition);
+
 }
 
 canvas {
@@ -45,16 +55,11 @@ canvas {
   opacity: 0;
   transition: 300ms;
 }
-
+/*
 body {
-  font-family: var(--font-body), sans-serif;
-  /*margin-top: -0.5rem;*/
-  background-color: black;
-  color: lightgray;
-  transition: var(--transition);
-  -webkit-tap-highlight-color: #7777ff33 !important;
+  margin-top: -0.5rem;
 }
-
+*/
 body h1 {
   font-family: var(--font-h1), sans-serif;
   margin-block-start: 0.8rem;
