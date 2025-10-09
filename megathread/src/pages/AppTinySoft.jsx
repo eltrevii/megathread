@@ -4,10 +4,8 @@
 
 import { Header } from '../main'
 import { Dropdown } from '../components/cDropdown'
-import useScript from '../scripts/useScript';
 
 function App() {
-  useScript("/src/script.js");
   return (
     <>
       <Header />
