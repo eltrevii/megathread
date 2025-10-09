@@ -76,6 +76,11 @@ details {
   padding: 0 1rem;
 }
 
+#nb-links {
+  display: flex;
+  gap: 0.5rem
+}
+
 #fancytoggle {
   background-color: var(--navbar-ftoggle-color);
   border-left: 12px solid var(--navbar-ftoggle-color);
@@ -151,10 +156,6 @@ a:not(.grid a) {
   text-decoration: none;
   text-shadow: 0px 0px 5px var(--navbar-a-color);
   transition: var(--transition-fast);
-}
-
-#nb-links a + a {
-  margin-left: 0.3rem;
 }
 
 #fancytoggle p {
