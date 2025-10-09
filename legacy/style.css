@@ -127,8 +127,8 @@ code {
   justify-self: flex-end;
 }
 
-#fancytoggle > input {
-  width: 1.25rem;
+#fancy-checkbox {
+  width: 1.3rem;
   justify-self: center;
 }
 
