@@ -31,13 +31,26 @@
   --hover-bg: #35f;
 
   --bg-opacity: 0.5;
+  
   width: 100%;
+  max-width: 960px;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  justify-self: center;
 }
+
+@media only screen
+and (min-width: calc(960px + 10vw))
+{
+  :root {
+    padding: 0;
+  }
+}
+
 
 body {
   justify-self: center;
-  width: 100%;
-  max-width: 960px;
+  width: 100%;  
 }
 
 /*
