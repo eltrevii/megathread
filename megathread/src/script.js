@@ -83,6 +83,7 @@ window.onload = function() {
     }
 
     // check checkbox status to enable/disable fancy style
+    /*
     checkbox = function(elem) {
       if (elem.checked) {
         document.querySelector("#style2").removeAttribute("disabled")
@@ -92,11 +93,11 @@ window.onload = function() {
         document.querySelector(".content--canvas").setAttribute("disabled", "")
       }
     }
-
+    */
     // run check when the page starts because the checkbox
     //   is checked by default and elements are disabled
     //   by default, so this fixes that
-    checkbox(document.querySelector("#fancy-checkbox"))
+    //checkbox(document.querySelector("#fancy-checkbox"))
 
     /*
     document.onkeyup = function(e) {
