@@ -9,9 +9,9 @@ import AppTinySoft from "./pages/AppTinySoft";
 import useScript from "./scripts/useScript.jsx";
 
 function Background() {
-  useScript("/src/js/noise.min.js");
-  useScript("/src/js/shift.js", ["circleCount"]);
-  useScript("/src/js/util.js", ["PI"]);
+  //useScript("/src/js/noise.min.js");
+  //useScript("/src/js/shift.js");
+  //useScript("/src/js/util.js");
 
   return (
     <div className="content content--canvas" tabIndex="0" style={{ zIndex: -900 + "!important", position: "absolute" }}></div>
@@ -45,14 +45,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     container = document.getElementById("root");
     const root = createRoot(container);
     root.render(
-      //<StrictMode>
+      <StrictMode>
+        <Background />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AppMegathread />} />
           <Route path="/tinysoft" element={<AppTinySoft />} />
         </Routes>
       </BrowserRouter>
-      //</StrictMode>,
+      </StrictMode>,
     );
   }
 });
