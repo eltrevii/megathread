@@ -34,7 +34,6 @@
   
   -webkit-tap-highlight-color: #7777ff33 !important;
   transition: var(--transition);
-
 }
 
 canvas {
