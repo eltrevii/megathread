@@ -1,25 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router";
 
-import './index.css'
+import "./index.css";
 
-import AppMegathread from './pages/AppMegathread.jsx'
-import AppTinySoft from './pages/AppTinySoft'
-import useScript from './scripts/useScript.jsx'
+import AppMegathread from "./pages/AppMegathread.jsx";
+import AppTinySoft from "./pages/AppTinySoft";
+import useScript from "./scripts/useScript.jsx";
 
 function Background() {
-  useScript("/src/js/noise.min.js")
-  useScript("/src/js/shift.js", ["circleCount"])
-  useScript("/src/js/util.js", ["PI"])
+  useScript("/src/js/noise.min.js");
+  useScript("/src/js/shift.js", ["circleCount"]);
+  useScript("/src/js/util.js", ["PI"]);
 
   return (
-    <div className="content content--canvas" tabIndex="0" style={{zIndex: -900 + '!important', position: 'absolute'}}></div>
-  )
+    <div className="content content--canvas" tabIndex="0" style={{ zIndex: -900 + "!important", position: "absolute" }}></div>
+  );
 }
 
-function Header(params) {
-  useScript("/src/script.js")
+function Header() {
+  useScript("/src/script.js");
 
   return (
     <>
@@ -35,18 +35,26 @@ function Header(params) {
         </div>*/}
       </div>
     </>
-  )
+  );
 }
 
-createRoot(document.getElementById('root')).render(
-  //<StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AppMegathread />} />
-        <Route path="/tinysoft" element={<AppTinySoft />} />
-      </Routes>
-    </BrowserRouter>
-  //</StrictMode>,
-)
+let container = null;
 
-export { Background, Header }
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (!container) {
+    container = document.getElementById("root");
+    const root = createRoot(container);
+    root.render(
+      //<StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AppMegathread />} />
+          <Route path="/tinysoft" element={<AppTinySoft />} />
+        </Routes>
+      </BrowserRouter>
+      //</StrictMode>,
+    );
+  }
+});
+
+export { Background, Header };
