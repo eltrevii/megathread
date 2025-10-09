@@ -73,7 +73,7 @@ details {
   border-radius: calc(var(--radius-default) * 4);
   position: sticky;
   top: 1.1rem;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 #nb-links {
