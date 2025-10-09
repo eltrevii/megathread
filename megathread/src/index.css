@@ -365,6 +365,8 @@ details {
 pre {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+  padding-left: 1ch;
+  padding-right: 1ch;
 }
 
 details {

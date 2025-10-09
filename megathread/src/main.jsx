@@ -20,7 +20,6 @@ function Background() {
 
 function Header() {
   useScript("/src/script.js");
-
   return (
     <>
       <div className="grid">

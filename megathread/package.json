@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "@preact/compat": "^18.3.1",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
     "react-router": "^7.9.4"
   },
   "devDependencies": {

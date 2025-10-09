@@ -1,3 +1,4 @@
+(function() {
 window.onload = function() {
   mtpre = document.querySelector("#multitracks pre")
   // for letters a to z (character codes, retrieved in L8:34)
@@ -123,3 +124,4 @@ window.onload = function() {
     //[...code].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
     // more js HERE
   };
+})();
