@@ -121,9 +121,9 @@ code {
 }
 
 #fancytoggle {
-  display: grid;
+  display: flex;
+  gap: 0.3rem;
   background-color: var(--navbar-ftoggle-color);
-  grid-template-columns: 2fr 1fr;
   justify-self: flex-end;
 }
 
