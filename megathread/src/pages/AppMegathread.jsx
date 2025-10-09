@@ -5,11 +5,8 @@
 import { Background, Header } from '../main'
 
 function App() {
-
-
   return (
     <>
-      
       <Header />
     </>
   )
