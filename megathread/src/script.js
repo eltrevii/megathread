@@ -1,5 +1,5 @@
-(function() {
-window.onload = function() {
+function a() {
+//window.onload = function() {
   mtpre = document.querySelector("#multitracks pre")
   // for letters a to z (character codes, retrieved in L8:34)
   try {
@@ -123,5 +123,21 @@ window.onload = function() {
     //[...code].forEach(el => el.textContent = removell(el.textContent));
     //[...code].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
     // more js HERE
-  };
-})();
+//  };
+//} catch(e) { console.log(e) }
+}
+
+var tCheck = document.getElementById("ranscript");
+if (tCheck && tCheck.getAttribute("page") == document.URL) {
+  console.log("tried to run script twice")
+} else {
+  if (tCheck) {
+    document.body.removeChild(tCheck)
+  }
+  a()
+  console.log("a")
+  dDiv = document.createElement("div");
+  dDiv.setAttribute("id", "ranscript");
+  dDiv.setAttribute("page", document.URL);
+  document.body.appendChild(dDiv);
+}

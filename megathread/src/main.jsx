@@ -6,7 +6,7 @@ import "./index.css";
 
 import AppMegathread from "./pages/AppMegathread.jsx";
 import AppTinySoft from "./pages/AppTinySoft";
-import useScript from "./scripts/useScript.jsx";
+import useScript from "./scripts/useScript"
 
 function Background() {
   //useScript("/src/js/noise.min.js");

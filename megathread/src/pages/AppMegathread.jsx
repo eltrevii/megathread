@@ -22,6 +22,16 @@ function App() {
         * <a href="https://faceit.com">FACEIT</a> <br />
         * ESL CS | <a href="https://youtu.be/BtbNz-k9GX4">MEJORES MAPAS</a>
       </Dropdown>
+
+      <Dropdown title="videos">
+        * ZNORUX | <a href="https://youtu.be/VNmr8TOZrtA">COSAS QUE DEBES SABER</a><br />
+        * ZNORUX | <a href="https://youtu.be/LNCHSiUFPaU">GUIA DE OPTIMIZACION</a><br />
+        * ZNORUX | <a href="https://youtu.be/SgSB1MACAtM">GUIA DE OPTIMIZACION BETA</a>
+      </Dropdown>
+
+      <Dropdown title="otros">
+        * <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3031823818">COMANDOS DE CUCHILLOS</a>
+      </Dropdown>
     </>
   )
 }
