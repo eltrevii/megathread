@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'my firzt blog postz'
+title: 'rawr'
 pubDate: 2025-10-20
 description: 'my fizt poztz !!1'
 author: 'da katz'
