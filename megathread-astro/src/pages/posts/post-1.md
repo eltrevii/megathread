@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'my firzt blog postz'
-date: 2025-10-20
+pubDate: 2025-10-20
 description: 'my fizt poztz !!1'
 author: 'da katz'
 image:
@@ -8,10 +9,6 @@ image:
     alt: 'kittiez!!!!!!111'
 tags: ["kittiez", "blogz", "learnign"]
 ---
-
-# my firzt blog postz
-
-publish on 2025-10-20
 
 welkam 2 my _new blogz!!1_ i sharez **my learnign!!!!!111**
 
