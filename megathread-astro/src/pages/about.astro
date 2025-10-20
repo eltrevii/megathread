@@ -1,5 +1,18 @@
 ---
+const pageTitle = 'abotz me';
 
+const identity = {
+	firstName: "KITTIE!!1",
+	country: "KITTYLANDZ!!1",
+	occupation: "MAEKIGN KITTIEZ!1",
+	hobbies: ["kittiez", "moar kittiez", "prorgamz"],
+};
+
+const skills = ["kittiez", "MOAR KITTIEZ!!!1"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,14 +21,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">home</a>
         <a href="/about">about</a>
         <a href="/blog">blog</a>
-		<h1>trevi's blog</h1>
-        <p>soemthing i guess</p>
-        <p>hewwo</p>
+		<h1>{pageTitle}</h1>
+        <p>heweo iam:</p>
+        <ul>
+			<li>my naem iz {identity.firstName}</li>
+			<li>i liev in {identity.country}</li>
+			{identity.hobbies.length >= 2 &&
+				<li>twow og my hobiez r:</li>
+			}
+		</ul>
+		<p>my skilz r:</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+		{happy && <p>IAM HAPPIEZ!!!!11</p>}
+		{finished && <p>IAM FINIHS!!!1111</p>}
+		{goal === 3 ? <p>MY GOALZ IZ 3 DAYZ!!1</p>: <p>MY GOALZ IZ NOTZ</p>}
 	</body>
 </html>
