@@ -3,16 +3,20 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "postinstall": "astro telemetry disable",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^4.1.1",
+    "@astrojs/rss": "^4.0.12",
     "@sentry/astro": "^10.20.0",
     "@spotlightjs/astro": "^3.2.6",
-    "astro": "^5.14.3",
-    "astro-font": "^1.1.0"
+    "astro": "^5.14.7",
+    "astro-font": "^1.1.0",
+    "preact": "^10.27.2"
   },
   "packageManager": "pnpm@10.18.3+sha512.bbd16e6d7286fd7e01f6b3c0b3c932cda2965c06a908328f74663f10a9aea51f1129eea615134bf992831b009eabe167ecb7008b597f40ff9bc75946aadfb08d"
 }

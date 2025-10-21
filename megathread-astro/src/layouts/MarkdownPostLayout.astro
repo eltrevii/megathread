@@ -4,12 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="tags">
-        {frontmatter.tags.map((tag) =>
+        {frontmatter.tags.map((tag: any) =>
             <p class="tag"><a href={`/tags/${tag}`}>#{tag}</a></p>
         )}
     </div>
 
-    <p>publihs on {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>publihs on {frontmatter.pubDate.toLocaleDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>writn by {frontmatter.author}</p>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />

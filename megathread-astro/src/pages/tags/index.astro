@@ -1,14 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
-const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const allPosts = getCollection("blog");
+const tags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())];
 const pageTitle = 'TAGZ !!1';
 ---
 <BaseLayout pageTitle={pageTitle}>
     <div class="tags">
         {tags.map((tag) =>
-            <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+            <p class="tag"><a href={`/tags/${tag}`}>#{tag}</a></p>
         )}
     </div>
 </BaseLayout>

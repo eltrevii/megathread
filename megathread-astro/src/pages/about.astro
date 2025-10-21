@@ -12,7 +12,7 @@ const identity = {
 const skills = ["kittiez", "MOAR KITTIEZ!!!1"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 ---
 
@@ -22,7 +22,7 @@ const goal = 3;
 		<li>my naem iz {identity.firstName}</li>
 		<li>i liev in {identity.country}</li>
 		{identity.hobbies.length >= 2 &&
-			<li>twow og my hobiez r:</li>
+			<li>twow og my hobiez r: {identity.hobbies[0]} n {identity.hobbies[1]}</li>
 		}
 	</ul>
 	<p>my skilz r:</p>

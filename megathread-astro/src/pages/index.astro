@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from '../components/preact/Greeting';
 const pageTitle = 'home paeg';
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<h2>my aewsoem blogz subtitelz :333</h2>
+	<Greeting client:load messages={["hewwo", "hai", "KITTIEZ!!!!1111"]} />
 </BaseLayout>

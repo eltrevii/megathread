@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'moar blog postz'
 pubDate: 2025-10-20
 description: 'my fizt poztz !!1'
